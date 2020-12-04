@@ -21,7 +21,8 @@
 import { defineComponent } from '@vue/composition-api';
 
 export default defineComponent({
-  setup () {
+  name: 'AppHeader',
+  setup() {
     const title = 'lioncross.dev_';
 
     function toggleDrawer() {
@@ -31,7 +32,7 @@ export default defineComponent({
     return {
       title,
       toggleDrawer
-    }
+    };
   }
-})
+});
 </script>
