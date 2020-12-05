@@ -22,11 +22,12 @@ import { defineComponent } from '@vue/composition-api';
 
 export default defineComponent({
   name: 'AppHeader',
-  setup() {
+  props: {},
+  setup(props, { root }) {
     const title = 'lioncross.dev_';
 
-    function toggleDrawer() {
-      console.error('In toggleDrawer');
+    function toggleDrawer(): void {
+      // return root.$store.getters('DRAWER_VISIBLE');
     }
 
     return {

@@ -1,8 +1,8 @@
 import { ActionTree } from 'vuex';
-import { StateInterface } from '../index';
+import { AppState } from '../state';
 import { ExampleStateInterface } from './state';
 
-const actions: ActionTree<ExampleStateInterface, StateInterface> = {
+const actions: ActionTree<ExampleStateInterface, AppState> = {
   someAction (/* context */) {
     // your code
   }

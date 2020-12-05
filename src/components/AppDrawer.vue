@@ -9,12 +9,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api';
+import { defineComponent, computed } from '@vue/composition-api';
 
 export default defineComponent({
   name: 'AppDrawer',
-  setup () {
-    const drawerVisible = true;
+  setup (props, { root }) {
+    console.error('store:', root.$store);
+    const drawerVisible = computed(function(): void {
+      // return root.$store.getters;
+    });
 
     return {
       drawerVisible
