@@ -1,6 +1,6 @@
 <template>
   <q-drawer
-    v-model="drawerVisible"
+    :value="visible"
     show-if-above
     bordered
     content-class="bg-grey-1"
@@ -9,18 +9,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from '@vue/composition-api';
+import { defineComponent } from '@vue/composition-api';
+import { useGetters } from 'vuex-composition-helpers';
+import { GET_DRAWER_VISIBLE } from 'src/store/types/getterTypes';
 
 export default defineComponent({
   name: 'AppDrawer',
-  setup (props, { root }) {
-    console.error('store:', root.$store);
-    const drawerVisible = computed(function(): void {
-      // return root.$store.getters;
-    });
-
+  setup () {
+    const getters = useGetters([GET_DRAWER_VISIBLE]);
+    const visible = getters[GET_DRAWER_VISIBLE];
     return {
-      drawerVisible
+      visible
     }
   }
 })

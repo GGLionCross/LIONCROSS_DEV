@@ -8540,6 +8540,11 @@ vue@2.6.12:
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
   integrity sha512-uhmLFETqPPNyuLLbsKz6ioJ4q7AZHzD8ZVFNATNyICSZouqP2Sz0rotWQC8UNBF6VGSCs5abnKJoStA6JbCbfg==
 
+vuex-composition-helpers@^1.0.21:
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/vuex-composition-helpers/-/vuex-composition-helpers-1.0.21.tgz#5ee420365cad294aa0ac2d41729718d1643c36ae"
+  integrity sha512-HpezDGuF4aaQ7/xtnPcjDKnWMiFyOuyW8a6uejs5t+iar76xmAw9ASGyvHGe8/vDEXR9Z3qp9nGqzCFBH2Gy+g==
+
 vuex@3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.6.0.tgz#95efa56a58f7607c135b053350833a09e01aa813"

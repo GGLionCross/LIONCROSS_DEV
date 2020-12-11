@@ -1,5 +1,5 @@
 <template>
-  <q-header elevated>
+  <q-header bordered>
     <q-toolbar>
       <q-btn
         flat
@@ -19,15 +19,17 @@
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api';
+import { useActions } from 'vuex-composition-helpers';
+import { TOGGLE_DRAWER_VISIBLE } from 'src/store/types/actionTypes';
 
 export default defineComponent({
   name: 'AppHeader',
   props: {},
-  setup(props, { root }) {
+  setup() {
     const title = 'lioncross.dev_';
-
-    function toggleDrawer(): void {
-      // return root.$store.getters('DRAWER_VISIBLE');
+    const actions = useActions([TOGGLE_DRAWER_VISIBLE]);
+    function toggleDrawer() {
+      actions[TOGGLE_DRAWER_VISIBLE]();
     }
 
     return {

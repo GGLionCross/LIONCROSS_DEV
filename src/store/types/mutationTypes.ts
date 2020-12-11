@@ -1,0 +1,1 @@
+export const SET_DRAWER_VISIBLE = 'SET_DRAWER_VISIBLE';
