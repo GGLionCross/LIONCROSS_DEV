@@ -1,1 +1,2 @@
 export const GET_DRAWER_VISIBLE = 'GET_DRAWER_VISIBLE';
+export const GET_THEME = 'GET_THEME';
