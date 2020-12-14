@@ -1,4 +1,4 @@
-import { DARK_THEME } from './../css/themes/themeTypes';
+import { DARK_THEME } from '../css/themes/themeTypes';
 
 export interface AppState {
   drawerVisible: boolean;
