@@ -1,0 +1,19 @@
+$primary: #bce9e4;
+$secondary: #53968d;
+$accent: #a22821;
+$info: #333333;
+
+// Override Quasar Themes
+[data-theme='light'] {
+  --q-color-primary: #{$primary};
+  --q-color-secondary: #{$secondary};
+  --q-color-accent: #{$accent};
+  --q-color-info: #{$info};
+  background-color: $primary;
+  color: $info;
+  // Custom Theme Classes
+  .text-header {
+    color: $primary;
+  }
+}
+
