@@ -2,8 +2,7 @@
   <q-drawer
     :value="visible"
     show-if-above
-    bordered
-    content-class="bg-grey-1"
+    content-class="bg-secondary"
   >
   </q-drawer>
 </template>

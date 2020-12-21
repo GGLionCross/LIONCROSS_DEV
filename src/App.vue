@@ -1,9 +1,5 @@
 <template>
-  <div
-    id="q-app"
-    :data-theme="theme"
-    :class="contentClass"
-  >
+  <div id="q-app" :data-theme="theme">
     <router-view />
   </div>
 </template>
@@ -18,20 +14,9 @@ export default defineComponent({
   setup() {
     const getters = useGetters([GET_THEME]);
     const theme = getters[GET_THEME];
-    const contentClass = [
-      `bg-content-${<string>theme.value}`,
-      `text-content-${<string>theme.value}`
-    ];
     return {
-      theme,
-      contentClass
+      theme
     };
   }
 });
 </script>
-
-<style lang="scss">
-[data-theme='dark'] {
-  --q-color-primary: #3700B3;
-}
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <q-header bordered>
+  <q-header class="bg-accent text-header">
     <q-toolbar>
       <q-btn
         flat
@@ -16,6 +16,7 @@
         :value="theme"
         :false-value="LIGHT_THEME"
         :true-value="DARK_THEME"
+        color="info"
         @input="toggleTheme"
       ></q-toggle>
     </q-toolbar>
@@ -39,12 +40,12 @@ export default defineComponent({
     const title = 'lioncross.dev_';
     const theme = getters[GET_THEME];
 
-    function toggleDrawer() {
-      actions[TOGGLE_DRAWER_VISIBLE]();
-    }
     function toggleTheme() {
       const newTheme = theme.value === LIGHT_THEME ? DARK_THEME : LIGHT_THEME;
       actions[SWITCH_THEME](newTheme);
+    }
+    function toggleDrawer() {
+      actions[TOGGLE_DRAWER_VISIBLE]();
     }
 
     return {
@@ -52,8 +53,8 @@ export default defineComponent({
       DARK_THEME,
       title,
       theme,
-      toggleDrawer,
-      toggleTheme
+      toggleTheme,
+      toggleDrawer
     };
   }
 });
