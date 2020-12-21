@@ -1,7 +1,18 @@
-.bg-content-dark {
-  background-color: #1F2128;
-}
+$primary: #1F2128; // Page
+$secondary: #1b2548; // Drawer
+$accent: #0e1a40; // Header
+$info: #eeeeee; // Common Text Color
 
-.text-content-dark {
-  color: #FFFFFF;
+// Override Quasar Themes
+[data-theme='dark'] {
+  --q-color-primary: #{$primary};
+  --q-color-secondary: #{$secondary};
+  --q-color-accent: #{$accent};
+  --q-color-info: #{$info};
+  background-color: $primary;
+  color: $info;
+  // Custom Theme Classes
+  .text-header {
+    color: $info;
+  }
 }
