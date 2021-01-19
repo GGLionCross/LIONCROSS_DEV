@@ -1,16 +1,22 @@
 <template>
   <q-page class="column justify-start">
-    <category-layout category-name="Web Development"></category-layout>
+    <project-category-layout category-name="Web Development">
+      <project-card
+        project-name="statboosthq"
+        project-title="statboosthq.com"
+      ></project-card>
+    </project-category-layout>
   </q-page>
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api';
-import CategoryLayout from 'layouts/CategoryLayout.vue';
+import ProjectCard from 'components/ProjectCard.vue';
+import ProjectCategoryLayout from 'layouts/ProjectCategoryLayout.vue';
 
 export default defineComponent({
   name: 'PagePortfolio',
-  components: { CategoryLayout },
+  components: { ProjectCard, ProjectCategoryLayout },
   setup() {
     return {};
   }
