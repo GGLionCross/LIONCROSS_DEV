@@ -6,7 +6,7 @@
 import { defineComponent } from '@vue/composition-api';
 
 export default defineComponent({
-  name: 'Project',
+  name: 'ProjectCard',
   setup() {
     return {};
   }
