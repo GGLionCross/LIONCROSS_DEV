@@ -4,6 +4,7 @@
       <project-card
         project-name="statboosthq"
         project-title="statboosthq.com"
+        :project-tags="statboostTags"
       ></project-card>
     </project-category-layout>
   </q-page>
@@ -15,10 +16,13 @@ import ProjectCard from 'components/ProjectCard.vue';
 import ProjectCategoryLayout from 'layouts/ProjectCategoryLayout.vue';
 
 export default defineComponent({
-  name: 'PagePortfolio',
+  name: 'ProjectPage',
   components: { ProjectCard, ProjectCategoryLayout },
   setup() {
-    return {};
+    let statboostTags = ['Website Manager', 'Wix'];
+    return {
+      statboostTags
+    };
   }
 });
 </script>
