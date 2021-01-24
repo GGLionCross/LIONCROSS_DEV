@@ -1,12 +1,12 @@
 <template>
   <q-card class="project-card">
-    <q-img class="cursor-pointer" :src="thumbnailSrc" :ratio="16/9" />
+    <q-img class="cursor-pointer" :src="config.previewSrc" :ratio="16/9" />
     <q-card-section class="text-accent">
       <q-item-label class="project-title text-h6 text-center cursor-pointer q-mb-sm">
-        {{ projectTitle }}
+        {{ config.title }}
       </q-item-label>
       <div class="row justify-center">
-        <q-chip v-for="(tag, index) in projectTags" :key="index" size="sm" outline square>
+        <q-chip v-for="(tag, index) in config.tags" :key="index" size="sm" outline square>
           {{ tag }}
         </q-chip>
       </div>
@@ -15,29 +15,15 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from '@vue/composition-api';
+import { defineComponent } from '@vue/composition-api';
 
 export default defineComponent({
   name: 'ProjectCard',
   props: {
-    projectName: {
-      type: String,
+    config: {
+      type: Object,
       required: true
-    },
-    projectTitle: {
-      type: String,
-      required: true
-    },
-    projectTags: {
-      type: Array,
-      default: () => []
     }
-  },
-  setup(props) {
-    const thumbnailSrc = computed(() => {
-      return `/portfolio/${props.projectName}/thumbnail.png`
-    });
-    return { thumbnailSrc };
   }
 });
 </script>

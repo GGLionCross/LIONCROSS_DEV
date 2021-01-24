@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="category-name-container q-px-lg q-py-md">
-      {{ categoryName }}
+    <div class="list-name-container q-px-lg q-py-md">
+      {{ listName }}
     </div>
     <div class="q-px-lg q-py-md">
       <slot></slot>
@@ -15,7 +15,7 @@ import { defineComponent } from '@vue/composition-api';
 export default defineComponent({
   name: 'ProjectListLayout',
   props: {
-    categoryName: {
+    listName: {
       type: String,
       required: true
     },
@@ -24,7 +24,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.category-name-container {
+.list-name-container {
   border-bottom: 2px solid white;
   font-size: 2em;
 }

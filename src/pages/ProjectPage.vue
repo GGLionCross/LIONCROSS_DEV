@@ -1,10 +1,10 @@
 <template>
   <q-page class="column justify-start">
-    <project-list-layout category-name="Web Development">
+    <project-list-layout list-name="Web Development">
       <project-preview
-        project-name="statboosthq"
-        project-title="statboosthq.com"
-        :project-tags="statboostTags"
+        v-for="project in Object.values(WebDevelopmentProjects)"
+        :key="project.name"
+        :config="project"
       ></project-preview>
     </project-list-layout>
   </q-page>
@@ -14,15 +14,15 @@
 import { defineComponent } from '@vue/composition-api';
 import ProjectPreview from 'components/ProjectPreview.vue';
 import ProjectListLayout from 'layouts/ProjectListLayout.vue';
+import WebDevelopmentProjects from 'src/config/projects/web-development';
 
 export default defineComponent({
   name: 'ProjectPage',
   components: { ProjectPreview, ProjectListLayout },
   setup() {
-    let statboostTags = ['Website Manager', 'Wix'];
     return {
-      statboostTags
-    };
+      WebDevelopmentProjects
+    }
   }
 });
 </script>
