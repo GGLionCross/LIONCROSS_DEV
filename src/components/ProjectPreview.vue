@@ -5,6 +5,7 @@
       <q-item-label
         class="text-h6 text-center q-mb-sm"
         :class="titleClass"
+        @click="goToUrl()"
       >
         {{ config.title }}
       </q-item-label>
@@ -37,8 +38,14 @@ export default defineComponent({
   setup(props) {
     const hasUrl = Boolean(props.config.url);
     const titleClass = hasUrl ? 'cursor-pointer text-underline' : '';
+    function goToUrl() {
+      if (hasUrl) {
+        window.open(props.config.url, '_blank');
+      }
+    }
     return {
-      titleClass
+      titleClass,
+      goToUrl
     };
   }
 });
