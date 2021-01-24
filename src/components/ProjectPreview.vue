@@ -1,12 +1,21 @@
 <template>
   <q-card class="project-card">
-    <q-img class="cursor-pointer" :src="config.previewSrc" :ratio="16/9" />
+    <q-img class="cursor-pointer" :src="config.previewSrc" :ratio="16 / 9" />
     <q-card-section class="text-accent">
-      <q-item-label class="project-title text-h6 text-center cursor-pointer q-mb-sm">
+      <q-item-label
+        class="text-h6 text-center q-mb-sm"
+        :class="titleClass"
+      >
         {{ config.title }}
       </q-item-label>
       <div class="row justify-center">
-        <q-chip v-for="(tag, index) in config.tags" :key="index" size="sm" outline square>
+        <q-chip
+          v-for="(tag, index) in config.tags"
+          :key="index"
+          size="sm"
+          outline
+          square
+        >
           {{ tag }}
         </q-chip>
       </div>
@@ -24,6 +33,13 @@ export default defineComponent({
       type: Object,
       required: true
     }
+  },
+  setup(props) {
+    const hasUrl = Boolean(props.config.url);
+    const titleClass = hasUrl ? 'cursor-pointer text-underline' : '';
+    return {
+      titleClass
+    };
   }
 });
 </script>
@@ -31,8 +47,5 @@ export default defineComponent({
 <style scoped>
 .project-card {
   width: 250px;
-}
-.project-title {
-  text-decoration: underline;
 }
 </style>
