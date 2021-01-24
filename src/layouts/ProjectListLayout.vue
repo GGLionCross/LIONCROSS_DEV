@@ -11,11 +11,9 @@
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api';
-import ProjectCard from 'src/components/ProjectCard.vue';
 
 export default defineComponent({
   name: 'ProjectListLayout',
-  components: { ProjectCard },
   props: {
     categoryName: {
       type: String,
