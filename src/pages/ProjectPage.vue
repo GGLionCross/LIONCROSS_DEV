@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api';
-import ProjectPreview from 'components/ProjectPreview.vue';
+import ProjectPreview from 'components/project/ProjectPreview.vue';
 import ProjectListLayout from 'layouts/ProjectListLayout.vue';
 import WebDevelopmentProjects from 'src/config/projects/web-development';
 
