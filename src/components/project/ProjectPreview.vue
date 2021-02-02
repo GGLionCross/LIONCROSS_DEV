@@ -1,6 +1,11 @@
 <template>
   <q-card class="project-card">
-    <q-img class="cursor-pointer" :src="config.previewSrc" :ratio="16 / 9" />
+    <q-img
+      class="cursor-pointer"
+      :src="config.previewSrc"
+      :ratio="16 / 9"
+      @click="openDialog"
+    />
     <q-card-section class="text-accent">
       <q-item-label
         class="text-h6 text-center q-mb-sm"
@@ -21,14 +26,17 @@
         </q-chip>
       </div>
     </q-card-section>
+    <project-dialog v-model="dialogOpen"></project-dialog>
   </q-card>
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api';
+import { defineComponent, ref } from '@vue/composition-api';
+import ProjectDialog from './ProjectDialog.vue';
 
 export default defineComponent({
   name: 'ProjectCard',
+  components: { ProjectDialog },
   props: {
     config: {
       type: Object,
@@ -43,9 +51,15 @@ export default defineComponent({
         window.open(props.config.url, '_blank');
       }
     }
+    const dialogOpen = ref(false);
+    function openDialog() {
+      dialogOpen.value = true;
+    }
     return {
       titleClass,
-      goToUrl
+      goToUrl,
+      dialogOpen,
+      openDialog
     };
   }
 });
