@@ -26,17 +26,15 @@
         </q-chip>
       </div>
     </q-card-section>
-    <project-dialog v-model="dialogOpen"></project-dialog>
+    <component :is="config.dialogComponent" v-model="dialogOpen"></component>
   </q-card>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from '@vue/composition-api';
-import ProjectDialog from './ProjectDialog.vue';
 
 export default defineComponent({
   name: 'ProjectCard',
-  components: { ProjectDialog },
   props: {
     config: {
       type: Object,

@@ -4,6 +4,8 @@ export default {
     title: 'statboosthq.com',
     url: 'https://www.statboosthq.com/',
     tags: ['Website Manager', 'Wix'],
-    previewSrc: '/portfolio/statboosthq/thumbnail.png'
+    previewSrc: '/portfolio/statboosthq/thumbnail.png',
+    dialogComponent: () =>
+      import('components/project/projects/ProjectStatboost.vue')
   }
 };
