@@ -26,7 +26,11 @@
         </q-chip>
       </div>
     </q-card-section>
-    <component :is="config.dialogComponent" v-model="dialogOpen"></component>
+    <component
+      :is="config.dialogComponent"
+      v-model="dialogOpen"
+      :project-title="config.title"
+    ></component>
   </q-card>
 </template>
 
