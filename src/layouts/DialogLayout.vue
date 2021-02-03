@@ -1,5 +1,5 @@
 <template>
-  <q-dialog v-bind="$attrs" :data-theme="theme">
+  <q-dialog v-bind="$attrs" :data-theme="theme" v-on="$listeners">
     <q-layout>
       <slot></slot>
     </q-layout>
