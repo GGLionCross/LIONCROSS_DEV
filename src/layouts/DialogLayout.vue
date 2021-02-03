@@ -1,5 +1,5 @@
 <template>
-  <q-dialog v-bind="$attrs">
+  <q-dialog v-bind="$attrs" :data-theme="theme">
     <q-layout>
       <slot></slot>
     </q-layout>
@@ -8,8 +8,17 @@
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api';
+import { GET_THEME } from 'src/store/types/getterTypes';
+import { useGetters } from 'vuex-composition-helpers';
 
 export default defineComponent({
-  name: 'DialogLayout'
+  name: 'DialogLayout',
+  setup() {
+    const getters = useGetters([GET_THEME]);
+    const theme = getters[GET_THEME];
+    return {
+      theme
+    };
+  }
 });
 </script>
