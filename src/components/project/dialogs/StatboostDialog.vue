@@ -7,7 +7,7 @@ import { defineComponent } from '@vue/composition-api';
 import ProjectDialog from 'components/project/ProjectDialog.vue';
 
 export default defineComponent({
-  name: 'ProjectStatboost',
+  name: 'StatboostDialog',
   components: { ProjectDialog }
 })
 </script>

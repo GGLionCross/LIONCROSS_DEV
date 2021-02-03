@@ -6,6 +6,6 @@ export default {
     tags: ['Website Manager', 'Wix'],
     previewSrc: '/portfolio/statboosthq/thumbnail.png',
     dialogComponent: () =>
-      import('components/project/projects/ProjectStatboost.vue')
+      import('components/project/dialogs/StatboostDialog.vue')
   }
 };
