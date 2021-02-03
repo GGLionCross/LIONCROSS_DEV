@@ -9,8 +9,6 @@ $info: #eeeeee; // Common Text Color
   --q-color-secondary: #{$secondary};
   --q-color-accent: #{$accent};
   --q-color-info: #{$info};
-  background-color: $primary;
-  color: $info;
   // Custom Theme Classes
   .text-header {
     color: $info;
