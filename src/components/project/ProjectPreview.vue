@@ -30,6 +30,7 @@
       :is="config.dialogComponent"
       v-model="dialogOpen"
       :project-title="config.title"
+      :project-highlights="config.highlightSrcs"
     ></component>
   </q-card>
 </template>
