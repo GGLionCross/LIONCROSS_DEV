@@ -10,7 +10,7 @@
       <q-item-label
         class="text-h6 text-center q-mb-sm"
         :class="titleClass"
-        @click="goToUrl()"
+        @click="goToUrl"
       >
         {{ config.title }}
       </q-item-label>

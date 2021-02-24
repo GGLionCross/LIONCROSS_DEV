@@ -42,9 +42,8 @@ export default defineComponent({
       default: () => []
     }
   },
-  setup(props, context) {
+  setup() {
     const highlightChoice = ref(0);
-    console.error('context:', context);
     function handleEmit(value) {
       console.error('value: ', value);
     }
