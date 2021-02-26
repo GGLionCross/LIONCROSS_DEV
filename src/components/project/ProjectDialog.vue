@@ -9,7 +9,7 @@
         arrows
         infinite
         navigation
-        control-color="primary"
+        control-color="accent"
         control-type="push"
       >
         <q-carousel-slide
