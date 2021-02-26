@@ -13,4 +13,10 @@ $info: #eeeeee; // Common Text Color
   .text-header {
     color: $info;
   }
+  .project-list-layout {
+    .list-name-container {
+      border-bottom: 2px solid $info;
+      color: $info;
+    }
+  }
 }

@@ -13,5 +13,11 @@ $info: #333333;
   .text-header {
     color: $primary;
   }
+  .project-list-layout {
+    .list-name-container {
+      border-bottom: 2px solid $accent;
+      color: $accent;
+    }
+  }
 }
 
