@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="project-list-layout">
     <div class="list-name-container q-px-lg q-py-md">
       {{ listName }}
     </div>
@@ -25,7 +25,6 @@ export default defineComponent({
 
 <style lang="scss">
 .list-name-container {
-  border-bottom: 2px solid white;
   font-size: 2em;
 }
 </style>
