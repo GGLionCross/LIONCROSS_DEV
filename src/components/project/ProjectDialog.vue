@@ -19,6 +19,7 @@
           :img-src="highlight"
         ></q-carousel-slide>
       </q-carousel>
+      <slot></slot>
     </dialog-content>
   </dialog-layout>
 </template>
