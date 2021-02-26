@@ -18,6 +18,7 @@
         <q-chip
           v-for="(tag, index) in config.tags"
           :key="index"
+          color="accent"
           size="sm"
           outline
           square
