@@ -1,5 +1,5 @@
 <template>
-  <project-dialog v-bind="$attrs"></project-dialog>
+  <project-dialog v-bind="$attrs" v-on="$listeners"></project-dialog>
 </template>
 
 <script lang="ts">
