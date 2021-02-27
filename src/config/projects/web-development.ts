@@ -13,7 +13,8 @@ export default {
       '/portfolio/statboosthq/highlights/home-3.png',
       '/portfolio/statboosthq/highlights/home-4.png',
       '/portfolio/statboosthq/highlights/shop.png',
-      '/portfolio/statboosthq/highlights/contact.png',
+      '/portfolio/statboosthq/highlights/about.png',
+      '/portfolio/statboosthq/highlights/contact.png'
     ]
   }
 };
