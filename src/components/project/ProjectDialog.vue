@@ -1,5 +1,5 @@
 <template>
-  <dialog-layout v-bind="$attrs" v-on="$listeners">
+  <dialog-layout v-bind="$attrs" @hide="handleDialogHide" v-on="$listeners">
     <dialog-header :dialog-title="projectTitle"></dialog-header>
     <dialog-content>
       <q-carousel
@@ -48,12 +48,12 @@ export default defineComponent({
   },
   setup() {
     const highlightChoice = ref(0);
-    function handleEmit(value) {
-      console.error('value: ', value);
+    function handleDialogHide() {
+      highlightChoice.value = 0;
     }
     return {
       highlightChoice,
-      handleEmit
+      handleDialogHide
     };
   }
 });
