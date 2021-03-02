@@ -1,12 +1,7 @@
 <template>
-  <q-card class="project-card">
-    <q-img
-      class="cursor-pointer"
-      :src="config.previewSrc"
-      :ratio="16 / 9"
-      @click="openDialog"
-    />
-    <q-card-section class="text-accent">
+  <q-card class="project-preview">
+    <q-img :src="config.previewSrc" :ratio="16 / 9" @click="showDialog" />
+    <q-card-section :class="titleSectionClass" @click="showDialog">
       <q-item-label
         class="text-h6 text-center q-mb-sm"
         :class="titleClass"
@@ -29,7 +24,7 @@
     </q-card-section>
     <component
       :is="config.dialogComponent"
-      v-model="dialogOpen"
+      v-model="displayDialog"
       :project-title="config.title"
       :project-highlights="config.highlightSrcs"
       :project-responsibilities="config.responsibilities"
@@ -38,7 +33,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@vue/composition-api';
+import { defineComponent, reactive, toRefs } from '@vue/composition-api';
 
 export default defineComponent({
   name: 'ProjectPreview',
@@ -50,28 +45,48 @@ export default defineComponent({
   },
   setup(props) {
     const hasUrl = Boolean(props.config.url);
+    const titleSectionClass: string[] = [
+      'title-section',
+      'cursor-pointer',
+      'bg-white',
+      'text-accent',
+      'absolute-full',
+      'column',
+      'justify-center'
+    ];
     const titleClass = hasUrl ? 'cursor-pointer text-underline' : '';
     function goToUrl() {
       if (hasUrl) {
         window.open(props.config.url, '_blank');
       }
     }
-    const dialogOpen = ref(false);
-    function openDialog() {
-      dialogOpen.value = true;
+    const display = reactive({
+      displayTitle: false,
+      displayDialog: false
+    });
+    function showDialog() {
+      display.displayDialog = true;
     }
     return {
+      titleSectionClass,
       titleClass,
       goToUrl,
-      dialogOpen,
-      openDialog
+      showDialog,
+      ...toRefs(display)
     };
   }
 });
 </script>
 
-<style scoped>
-.project-card {
+<style lang="scss" scoped>
+.project-preview {
   width: 250px;
+  .title-section {
+    opacity: 0;
+    transition: 0.3s;
+  }
+  .title-section:hover {
+    opacity: 0.85;
+  }
 }
 </style>
