@@ -9,5 +9,5 @@ import ProjectDialog from 'components/project/ProjectDialog.vue';
 export default defineComponent({
   name: 'StatboostDialog',
   components: { ProjectDialog }
-})
+});
 </script>

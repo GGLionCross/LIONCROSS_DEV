@@ -32,6 +32,7 @@
       v-model="dialogOpen"
       :project-title="config.title"
       :project-highlights="config.highlightSrcs"
+      :project-responsibilities="config.responsibilities"
     ></component>
   </q-card>
 </template>

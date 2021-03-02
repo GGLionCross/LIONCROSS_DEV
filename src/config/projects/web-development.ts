@@ -15,6 +15,12 @@ export default {
       '/portfolio/statboosthq/highlights/shop.png',
       '/portfolio/statboosthq/highlights/about.png',
       '/portfolio/statboosthq/highlights/contact.png'
+    ],
+    responsibilities: [
+      'Developed website for desktop and mobile',
+      'Organize media files and database collections',
+      'Utilize Corvid API to implement unique filters',
+      'Troubleshoot visual and functional issues'
     ]
   }
 };

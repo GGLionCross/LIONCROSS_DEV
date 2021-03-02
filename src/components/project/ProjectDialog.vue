@@ -22,6 +22,23 @@
           :img-src="highlight"
         ></q-carousel-slide>
       </q-carousel>
+      <q-card v-if="projectResponsibilities.length" class="q-ma-md">
+        <q-list bordered padding>
+          <q-item-label
+            class="text-accent text-uppercase text-bold text-underline"
+            header
+          >
+            Responsibilities
+          </q-item-label>
+          <q-item
+            v-for="(resp, index) in projectResponsibilities"
+            :key="index"
+            dense
+          >
+            <q-item-section class="text-accent">{{ resp }}</q-item-section>
+          </q-item>
+        </q-list>
+      </q-card>
       <slot></slot>
     </dialog-content>
   </dialog-layout>
@@ -42,6 +59,10 @@ export default defineComponent({
       required: true
     },
     projectHighlights: {
+      type: Array,
+      default: () => []
+    },
+    projectResponsibilities: {
       type: Array,
       default: () => []
     }
