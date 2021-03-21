@@ -80,7 +80,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .project-preview {
-  width: 250px;
+  width: 300px;
   .title-section {
     opacity: 0;
     transition: 0.3s;
