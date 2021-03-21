@@ -3,7 +3,7 @@
     <div class="list-name-container q-px-lg q-py-md">
       {{ listName }}
     </div>
-    <div>
+    <div class="row">
       <slot></slot>
     </div>
   </div>
