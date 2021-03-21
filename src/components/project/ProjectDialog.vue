@@ -6,7 +6,6 @@
         v-if="projectHighlights.length"
         v-model="highlightChoice"
         animated
-        autoplay
         arrows
         transition-next="slide-left"
         transition-prev="slide-right"
