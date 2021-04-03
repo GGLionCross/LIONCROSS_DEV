@@ -1,7 +1,6 @@
 <template>
   <q-drawer
     :value="visible"
-    show-if-above
     content-class="bg-secondary"
     @input="setDrawerVisible"
   >

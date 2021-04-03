@@ -6,7 +6,7 @@ export interface AppState {
 }
 
 const state: AppState = {
-  drawerVisible: true,
+  drawerVisible: false,
   theme: DARK_THEME
 }
 
