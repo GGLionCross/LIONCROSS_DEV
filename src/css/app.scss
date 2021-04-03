@@ -3,9 +3,3 @@
 // Themes
 @import './themes/light-theme';
 @import './themes/dark-theme';
-
-@media (min-width: 600px) {
-  .q-dialog__inner--minimized > div {
-    max-width: unset;
-  }
-}
