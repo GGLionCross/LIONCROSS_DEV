@@ -10,7 +10,7 @@
         @click="toggleDrawer"
       />
       <q-toolbar-title>
-        {{ title }}
+        {{ title }}<span class="blinking-cursor">_</span>
       </q-toolbar-title>
       <q-toggle
         :value="theme"
@@ -37,7 +37,7 @@ export default defineComponent({
     const actions = useActions([SWITCH_THEME, TOGGLE_DRAWER_VISIBLE]);
     const getters = useGetters([GET_THEME]);
 
-    const title = 'lioncross.dev_';
+    const title = 'lioncross.dev';
     const theme = getters[GET_THEME];
 
     function toggleTheme() {
@@ -59,3 +59,53 @@ export default defineComponent({
   }
 });
 </script>
+
+<style scoped>
+.blinking-cursor {
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+@keyframes blink {
+  from, to {
+    opacity: 0
+  }
+  50% {
+    opacity: 1
+  }
+}
+@-moz-keyframes blink {
+  from, to {
+    opacity: 0
+  }
+  50% {
+    opacity: 1
+  }
+}
+@-webkit-keyframes blink {
+  from, to {
+    opacity: 0
+  }
+  50% {
+    opacity: 1
+  }
+}
+@-ms-keyframes blink {
+  from, to {
+    opacity: 0
+  }
+  50% {
+    opacity: 1
+  }
+}
+@-o-keyframes blink {
+  from, to {
+    opacity: 0
+  }
+  50% {
+    opacity: 1
+  }
+}
+</style>
