@@ -1,5 +1,5 @@
 <template>
-  <q-card class="project-preview">
+  <q-card class="project-preview col" square flat>
     <q-img :src="config.previewSrc" :ratio="16 / 9" @click="showDialog" />
     <q-card-section :class="titleSectionClass" @click="showDialog">
       <q-item-label
@@ -80,7 +80,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .project-preview {
-  width: 300px;
   .title-section {
     opacity: 0;
     transition: 0.3s;
