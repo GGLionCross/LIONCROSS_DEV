@@ -22,5 +22,29 @@ export default {
       'Utilize Corvid API to implement unique filters',
       'Troubleshoot visual and functional issues'
     ]
+  },
+  myhhub: {
+    name: 'myhhub',
+    title: 'myhhub.com',
+    url: '',
+    tags: ['Vue', 'Quasar', 'JavaScript', 'PHP', 'SQL'],
+    previewSrc: '/portfolio/myhhub/thumbnail.png',
+    dialogComponent: () =>
+      import('components/project/dialogs/StatboostDialog.vue'),
+    highlightSrcs: [
+      '/portfolio/myhhub/highlights/login.png',
+      '/portfolio/myhhub/highlights/claims_listing.png',
+      '/portfolio/myhhub/highlights/edit_office.png',
+      '/portfolio/myhhub/highlights/add_treatment.png',
+      '/portfolio/myhhub/highlights/patient_search.png',
+      '/portfolio/myhhub/highlights/ledger.png',
+      '/portfolio/myhhub/highlights/test_project.png'
+    ],
+    responsibilities: [
+      'Developed listing pages and popups',
+      'Developed patient ledger and patient search',
+      'Manually tested product and wrote automation test scripts',
+      'Created back-end classes with filters to query data'
+    ]
   }
 };
