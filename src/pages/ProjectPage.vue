@@ -1,12 +1,14 @@
 <template>
-  <q-page class="column justify-start">
-    <project-list-layout list-name="Web Development">
-      <project-preview
-        v-for="project in Object.values(WebDevelopmentProjects)"
-        :key="project.name"
-        :config="project"
-      ></project-preview>
-    </project-list-layout>
+  <q-page>
+    <div class="column justify-start">
+      <project-list-layout list-name="Web Development">
+        <project-preview
+          v-for="project in Object.values(WebDevelopmentProjects)"
+          :key="project.name"
+          :config="project"
+        ></project-preview>
+      </project-list-layout>
+    </div>
   </q-page>
 </template>
 

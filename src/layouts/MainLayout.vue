@@ -19,7 +19,6 @@ export default defineComponent({
   name: 'MainLayout',
   components: { AppHeader, AppDrawer },
   setup() {
-
     return {}
   }
 });
