@@ -4,7 +4,7 @@ export default {
     title: 'statboosthq.com',
     url: 'https://www.statboosthq.com/',
     tags: ['Website Manager', 'Wix'],
-    previewSrc: '/LIONCROSS_DEV/portfolio/statboosthq/thumbnail.png',
+    previewSrc: '/portfolio/statboosthq/thumbnail.png',
     dialogComponent: () =>
       import('components/project/dialogs/StatboostDialog.vue'),
     highlightSrcs: [
