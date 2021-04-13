@@ -52,7 +52,6 @@ module.exports = configure(function (ctx) {
     build: {
       vueRouterMode: 'hash', // available values: 'hash', 'history'
       distDir: 'docs',
-      publicPath: '/LIONCROSS_DEV',
 
       // transpile: false,
 
