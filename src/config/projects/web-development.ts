@@ -27,18 +27,18 @@ export default {
     name: 'myhhub',
     title: 'myhhub.com',
     url: '',
-    tags: ['Vue', 'Quasar', 'JavaScript', 'PHP', 'SQL'],
-    previewSrc: '/portfolio/myhhub/thumbnail.png',
+    tags: ['Vue', 'Quasar', 'JavaScript', 'PHP', 'SQL', 'jQuery'],
+    previewSrc: '', // '/portfolio/myhhub/thumbnail.png',
     dialogComponent: () =>
       import('components/project/dialogs/StatboostDialog.vue'),
     highlightSrcs: [
-      '/portfolio/myhhub/highlights/login.png',
-      '/portfolio/myhhub/highlights/claims_listing.png',
-      '/portfolio/myhhub/highlights/edit_office.png',
-      '/portfolio/myhhub/highlights/add_treatment.png',
-      '/portfolio/myhhub/highlights/patient_search.png',
-      '/portfolio/myhhub/highlights/ledger.png',
-      '/portfolio/myhhub/highlights/test_project.png'
+      // '/portfolio/myhhub/highlights/login.png',
+      // '/portfolio/myhhub/highlights/claims_listing.png',
+      // '/portfolio/myhhub/highlights/edit_office.png',
+      // '/portfolio/myhhub/highlights/add_treatment.png',
+      // '/portfolio/myhhub/highlights/patient_search.png',
+      // '/portfolio/myhhub/highlights/ledger.png',
+      // '/portfolio/myhhub/highlights/test_project.png'
     ],
     responsibilities: [
       'Developed listing pages and popups',

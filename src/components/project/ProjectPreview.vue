@@ -2,11 +2,7 @@
   <q-card class="project-preview col" square flat>
     <q-img :src="config.previewSrc" :ratio="16 / 9" @click="showDialog" />
     <q-card-section :class="titleSectionClass" @click="showDialog">
-      <q-item-label
-        class="text-h6 text-center q-mb-sm"
-        :class="titleClass"
-        @click="goToUrl"
-      >
+      <q-item-label class="text-h6 text-center q-mb-sm">
         {{ config.title }}
       </q-item-label>
       <div class="row justify-center">
@@ -54,12 +50,6 @@ export default defineComponent({
       'column',
       'justify-center'
     ];
-    const titleClass = hasUrl ? 'cursor-pointer text-underline' : '';
-    function goToUrl() {
-      if (hasUrl) {
-        window.open(props.config.url, '_blank');
-      }
-    }
     const display = reactive({
       displayTitle: false,
       displayDialog: false
@@ -69,8 +59,6 @@ export default defineComponent({
     }
     return {
       titleSectionClass,
-      titleClass,
-      goToUrl,
       showDialog,
       ...toRefs(display)
     };
