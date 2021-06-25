@@ -28,7 +28,7 @@ export default {
     title: 'myhhub.com',
     url: '',
     tags: ['Vue', 'Quasar', 'JavaScript', 'PHP', 'SQL', 'jQuery'],
-    previewSrc: '', // '/portfolio/myhhub/thumbnail.png',
+    previewSrc: '/portfolio/myhhub/thumbnail.png',
     dialogComponent: () =>
       import('components/project/dialogs/StatboostDialog.vue'),
     highlightSrcs: [

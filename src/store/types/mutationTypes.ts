@@ -1,1 +1,2 @@
 export const SET_DRAWER_VISIBLE = 'SET_DRAWER_VISIBLE';
+export const SET_THEME = 'SET_THEME';

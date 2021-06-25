@@ -21,6 +21,11 @@
           :img-src="highlight"
         ></q-carousel-slide>
       </q-carousel>
+      <q-card square>
+        <q-card-section class="text-center text-h3 text-bold text-accent">
+          Cannot provide samples.
+        </q-card-section>
+      </q-card>
       <q-card v-if="projectResponsibilities.length" class="q-ma-md">
         <q-list bordered padding>
           <q-item-label

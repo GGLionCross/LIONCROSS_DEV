@@ -4,7 +4,7 @@ import state, { ProjectState } from './state';
 import getters from './getters';
 import actions from './actions';
 import mutations from './mutations';
-
+ 
 export default store(function ({ Vue }) {
   Vue.use(Vuex);
 
