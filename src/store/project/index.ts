@@ -1,22 +1,16 @@
-import Vuex from 'vuex';
-import { store } from 'quasar/wrappers';
+import { Module } from 'vuex';
+import { AppState } from '../state';
 import state, { ProjectState } from './state';
 import getters from './getters';
 import actions from './actions';
 import mutations from './mutations';
  
-export default store(function ({ Vue }) {
-  Vue.use(Vuex);
+const projectModule: Module<ProjectState, AppState> = {
+  namespaced: true,
+  actions,
+  getters,
+  mutations,
+  state
+};
 
-  const Store = new Vuex.Store<ProjectState>({
-    state,
-    getters,
-    actions,
-    mutations,
-
-    // Adds overhead | for dev mode only
-    strict: !!process.env.DEBUGGING
-  });
-
-  return Store;
-});
+export default projectModule;
